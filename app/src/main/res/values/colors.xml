@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#693BB8</color>
+    <color name="background">#FAFAFA</color>
+    <color name="darker_white">#EAEAEA</color>
+    <color name="yellow">#FFD03D</color>
+    <color name="red">#E94852</color>
+    <color name="grey">#585858</color>
+    <color name="darker_grey">#3D3D3D</color>
+    <color name="background_bus_schedule">#F4F4F4</color>
+    <color name="text_grey_color">#808080</color>
+    <color name="text_grey2_color">#ADADAD</color>
+    <color name="dark_yellow">#8C6F12</color>
+    <color name="light_purple">#8749F2</color>
+    <color name="light_grey">#9A9A9A</color>
+    <color name="green">#61CA5F</color>
+    <color name="button_purple">#673AB7</color>
+</resources>

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_bus_schedule"
+    tools:context=".activities.BusScheduleActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:backgroundTint="@color/background_bus_schedule"
+            android:src="@drawable/back_icon"
+
+            />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bux_logo"
+            android:background="@color/background_bus_schedule"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/departureLayout"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_layout"
+                android:layout_marginRight="20dp"
+                android:padding="12dp"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/departure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Departure"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medan"
+                    android:textSize="16dp"
+                    android:layout_below="@id/departure"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_grey_color"
+                    />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/down_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/arrivalLayout"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_layout"
+                android:padding="12dp"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/arrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrival"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/arrival"
+                    android:text="Pekanbaru"
+                    android:textColor="@color/text_grey_color"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/down_arrow" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_layout"
+                android:layout_marginRight="10dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/timeArrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fri,23 Jul 2019"
+                    android:textSize="12dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_layout"
+                android:layout_marginRight="10dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/seat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seat 2"
+                    android:textSize="12dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_layout"
+
+                android:padding="6dp">
+
+                <TextView
+                    android:id="@+id/sortBt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sort by Best Experience"
+                    android:textColor="@color/purple_500"
+                    android:textSize="12dp"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/sempatibus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_layout">
+
+            <TextView
+                android:id="@+id/bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sempati Star"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"/>
+
+            <TextView
+                android:id="@+id/plate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P 1923 NM"
+                android:textSize="14dp"
+                android:textColor="@color/text_grey2_color"
+                android:layout_toRightOf="@id/bus"/>
+
+            <TextView
+                android:id="@+id/departure_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="17:35"
+                android:textSize="16dp"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:layout_below="@id/bus"/>
+
+            <LinearLayout
+                android:id="@+id/dots"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/departure_time"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dot1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/grey"
+
+                    android:layout_below="@id/departure_time"/>
+
+                <TextView
+                    android:id="@+id/dot2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/grey"
+
+                    android:layout_below="@id/bus"/>
+
+                <TextView
+                    android:id="@+id/dot3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/grey"
+                    android:layout_below="@id/bus"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/arrival_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:10"
+                android:textSize="16dp"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:layout_below="@id/dots"/>
+
+            <TextView
+                android:id="@+id/departure_terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal Amplas \n Medan"
+                android:textSize="12dp"
+                android:textColor="@color/text_grey2_color"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/departure_time"
+                android:layout_below="@id/bus"/>
+
+            <TextView
+                android:id="@+id/arrival_terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal Bandaraya \n Riau"
+                android:textSize="12dp"
+                android:textColor="@color/text_grey2_color"
+                android:layout_toRightOf="@id/arrival_time"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/departure_terminal"/>
+
+            <RelativeLayout
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_layout"
+                android:layout_alignParentRight="true"
+                android:padding="6dp"
+                android:backgroundTint="@color/yellow">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.9/5"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_yellow"
+                    android:layout_marginVertical="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_below="@id/star"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 \n Reviews"
+                android:layout_below="@id/rating"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:textSize="12dp"
+                android:textColor="@color/text_grey2_color"
+                android:textStyle="bold"/>
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:layout_below="@id/arrival_time"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp166.000,00"
+                android:layout_below="@id/line"
+                android:textColor="@color/light_purple"
+                android:textStyle="bold"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/seat"
+                android:layout_below="@id/price"
+                android:textColor="@color/grey"
+                android:textSize="12dp"/>
+
+            <Button
+                android:id="@+id/book_now_btn"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:text="BOOK NOW"
+                android:layout_below="@id/line"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:background="@drawable/search_layout"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pahalakencanabus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_layout"
+            android:backgroundTint="@color/darker_white">
+
+            <TextView
+                android:id="@+id/bus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pahala Kencana"
+                android:textColor="@color/text_grey2_color"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginRight="12dp"/>
+
+            <TextView
+                android:id="@+id/plate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P 1923 NM"
+                android:textSize="14dp"
+                android:textColor="@color/text_grey2_color"
+                android:layout_toRightOf="@id/bus2"/>
+
+            <TextView
+                android:id="@+id/departure_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="17:35"
+                android:textSize="16dp"
+                android:textColor="@color/text_grey2_color"
+                android:textStyle="bold"
+                android:layout_below="@id/bus2"/>
+
+            <LinearLayout
+                android:id="@+id/dots2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/departure_time2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dot12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/grey"
+
+                    android:layout_below="@id/departure_time"/>
+
+                <TextView
+                    android:id="@+id/dot22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/grey"
+
+                    android:layout_below="@id/bus2"/>
+
+                <TextView
+                    android:id="@+id/dot32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="."
+                    android:textSize="8dp"
+                    android:textColor="@color/grey"
+                    android:layout_below="@id/bus2"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/arrival_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:10"
+                android:textSize="16dp"
+                android:textColor="@color/text_grey2_color"
+                android:textStyle="bold"
+                android:layout_below="@id/dots2"/>
+
+            <TextView
+                android:id="@+id/departure_terminal2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal Amplas \n Medan"
+                android:textSize="12dp"
+                android:textColor="@color/text_grey2_color"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/departure_time2"
+                android:layout_below="@id/bus2"/>
+
+            <TextView
+                android:id="@+id/arrival_terminal2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal Bandaraya \n Riau"
+                android:textSize="12dp"
+                android:textColor="@color/text_grey2_color"
+                android:layout_toRightOf="@id/arrival_time2"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/departure_terminal2"/>
+
+            <RelativeLayout
+                android:id="@+id/rating2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_layout"
+                android:layout_alignParentRight="true"
+                android:padding="6dp"
+                android:backgroundTint="@color/grey">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.9/5"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_grey2_color"
+                    android:layout_marginVertical="3dp"
+                    android:paddingBottom="3dp"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 \n Reviews"
+                android:layout_below="@id/rating2"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:textSize="12dp"
+                android:textColor="@color/text_grey2_color"
+                android:textStyle="bold"/>
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                android:layout_below="@id/arrival_time2"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp80.000,00"
+                android:layout_below="@id/line2"
+                android:textColor="@color/text_grey2_color"
+                android:textStyle="bold"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/detail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/seat"
+                android:layout_below="@id/price2"
+                android:textColor="@color/text_grey2_color"
+                android:textSize="12dp"/>
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:text="BOOK NOW"
+                android:layout_below="@id/line2"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/grey"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:background="@drawable/search_layout"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

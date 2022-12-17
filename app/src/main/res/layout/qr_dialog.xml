@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:paddingVertical="20dp"
+    android:paddingHorizontal="40dp"
+    android:layout_margin="20dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alfamart_payment_code"
+        android:textStyle="bold"
+        android:textColor="@color/darker_grey"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qrcode"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/backToDetailBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_detail"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:layout_marginTop="25dp"
+        android:textAllCaps="true"
+        android:clickable="true"
+        />
+
+</LinearLayout>

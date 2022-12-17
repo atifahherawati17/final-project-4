@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="24dp"
+    tools:context=".activities.LoginActivity">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/illustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/login_illustration" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textSize="22dp"
+        android:textColor="@color/grey"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/illustration"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bux is a online booking service for \nBus transportation. login now to \nuser Bux services."
+        android:textSize="14dp"
+        android:textColor="@color/text_grey2_color"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/welcome"
+        android:textAlignment="center"
+        android:lineHeight="30dp"
+        android:layout_marginTop="20dp"/>
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="5dp"
+        android:background="@drawable/search_layout"
+        android:clickable="true">
+        
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/google_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up with google"
+            android:layout_centerInParent="true"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+        
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

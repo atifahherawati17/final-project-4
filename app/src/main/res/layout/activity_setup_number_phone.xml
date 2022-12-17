@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".activities.SetupNumberPhoneActivity">
+
+    <TextView
+        android:id="@+id/almost_there_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almost There!"
+        android:textSize="22dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/detail_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill your phone number below, so we can easily catch you \nup."
+        android:textSize="14dp"
+        android:textColor="@color/text_grey2_color"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/almost_there_textview"
+        android:lineHeight="30dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/phone_look_illustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/phone_look"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/detail_app"
+        android:layout_marginTop="45dp"/>
+
+    <TextView
+        android:id="@+id/phone_number_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:layout_above="@id/edittext"
+        android:layout_marginTop="75dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        android:textSize="14dp"/>
+    
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text"
+        android:text="Your phone number here"
+        android:textColor="@color/text_grey2_color"
+        android:textSize="14dp"
+        android:paddingLeft="15dp"
+        android:drawableLeft="@drawable/phone_logo"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@id/saveNumberBtn">
+
+    </EditText>
+    
+    <Button
+        android:id="@+id/saveNumberBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="SAVE NUMBER"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:background="@drawable/search_layout"
+        android:backgroundTint="#673AB7"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
